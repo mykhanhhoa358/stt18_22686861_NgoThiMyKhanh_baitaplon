@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="asset/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Đăng Nhập/Đăng Ký</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #f0f2f5;
+        }
+        .container {
+            width: 360px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            font-size: 14px;
+            margin-bottom: 5px;
+            display: block;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            outline: none;
+            font-size: 16px;
+        }
+        .form-group input:focus {
+            border-color: #007bff;
+        }
+        .btn {
+            width: 100%;
+            padding: 10px;
+            background: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background: #0056b3;
+        }
+        .switch-form {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 14px;
+        }
+        .switch-form a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .switch-form a:hover {
+            text-decoration: underline;
+        }
+        .form-hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Form Đăng Nhập -->
+        <div id="login-form">
+            <h2>Đăng Nhập</h2>
+            <div class="form-group">
+                <label for="login-email">Email</label>
+                <input type="email" id="login-email" placeholder="Nhập Email" required>
+            </div>
+            <div class="form-group">
+                <label for="login-password">Mật khẩu</label>
+                <input type="password" id="login-password" placeholder="Nhập Mật khẩu" required>
+            </div>
+            <a href="trangchu.html"><button class="btn">Đăng Nhập</button></a>
+            <div class="switch-form">
+                Bạn chưa có tài khoản? <a href="#" onclick="showRegisterForm()">Đăng Ký</a>
+            </div>
+        </div>
+
+        <!-- Form Đăng Ký -->
+        <div id="register-form" class="form-hidden">
+            <h2>Đăng Ký</h2>
+            <div class="form-group">
+                <label for="register-email">Email</label>
+                <input type="email" id="register-email" placeholder="Nhập Email" required>
+            </div>
+            <div class="form-group">
+                <label for="register-password">Mật khẩu</label>
+                <input type="password" id="register-password" placeholder="Nhập Mật khẩu" required>
+            </div>
+            <div class="form-group">
+                <label for="register-confirm-password">Xác nhận mật khẩu</label>
+                <input type="password" id="register-confirm-password" placeholder="Xác nhận Mật khẩu" required>
+            </div>
+            <a href="trangchu.html"><button class="btn">Đăng Ký</button></a>
+            <div class="switch-form">
+                Bạn đã có tài khoản? <a href="#" onclick="showLoginForm()">Đăng Nhập</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="asset/js/script.js"></script>
+</body>
+</html>
